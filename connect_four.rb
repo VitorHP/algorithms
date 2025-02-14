@@ -1,4 +1,11 @@
 class ConnectFour
+  def initialize
+    puts ''
+    puts ''
+    puts '==CONNECT FOUR=='
+    puts ''
+  end
+
   def board
     @board ||= 6.times.map do
       7.times.map { |_n| '_' }
@@ -161,4 +168,8 @@ def test_invalid_input
   game.play_moves(moves)
 end
 
+test_row_win
+test_col_win
+test_diagonal_win
+test_reverse_diagonal_win
 test_invalid_input
